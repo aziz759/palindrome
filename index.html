@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="a" placeholder="saisir le chaine " />
+    <button onclick="b()">test chaine palindrome click here</button>
+    <p id="z"></p>
+    <script>
+      function b() {
+        let i = 0;
+        let ch = document.getElementById("a").value;
+        while (i <= Math.floor(ch.length / 2)) {
+          if (ch[i] !== ch[ch.length - i - 1]) {
+            document.getElementById("z").innerHTML = " chaine non palindrome";
+            break;
+          }
+          i++;
+        }
+
+        if (i > Math.floor(ch.length / 2)) {
+          document.getElementById("z").innerHTML = "chaine est palindrome";
+        }
+      }
+    </script>
+  </body>
+</html>
